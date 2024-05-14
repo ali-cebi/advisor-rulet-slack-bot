@@ -29,7 +29,7 @@ def message(payload):
     channel = event.get('channel')
     user_id = event.get('user')
     ts = event.get('ts')
-    lucky_one = f'<@{advisor_selector()}> sende burası kankam 🫰'
+    lucky_one = f'<@{advisor_selector()}> sende burası kankam'
     if user_id != BOT_ID:
         client.chat_postMessage(channel=channel, thread_ts=ts, text=lucky_one)
 
