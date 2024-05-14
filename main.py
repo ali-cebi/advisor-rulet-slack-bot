@@ -23,17 +23,6 @@ def advisor_selector():
     return ADVISORS[randint(0, len(ADVISORS)-1)]
 
 
-@slack_event_adapter.on('app_mention')
-def message(payload):
-    event = payload.get('event', {})
-    channel = event.get('channel')
-    user_id = event.get('user')
-    ts = event.get('ts')
-    lucky_one = f'<@{advisor_selector()}> sende burası kankam 🫰'
-    if user_id != BOT_ID:
-        client.chat_postMessage(channel=channel, thread_ts=ts, text=lucky_one)
-
-
 @app.route("/")
 def hello_world():
     return "<p>This is advisor rulet for optimus team</p>"
