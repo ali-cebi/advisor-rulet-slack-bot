@@ -5,6 +5,7 @@ click==8.1.7
 Flask==2.3.3
 idna==3.7
 itsdangerous==2.2.0
+gunicorn==19.7.1
 Jinja2==3.1.4
 MarkupSafe==2.1.5
 pyee==11.1.0
